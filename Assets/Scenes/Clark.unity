@@ -494,7 +494,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: (f) jump
+  m_Text: (f) Toggle Jump Animation
 --- !u!222 &336840309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1826,7 +1826,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: (g) Night Button
+  m_Text: (g) Toggle Shade
 --- !u!222 &1829201961
 CanvasRenderer:
   m_ObjectHideFlags: 0
