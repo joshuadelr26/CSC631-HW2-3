@@ -32,10 +32,14 @@ public class CombinedMouseLookAndCameraMove : MonoBehaviour
     public KeyCode backKey = KeyCode.S;
     public KeyCode rightKey = KeyCode.D;
 
+    Animator animator;
+
     void Start()
     {
         // Set target direction to the camera's initial orientation.
         targetDirection = transform.localRotation.eulerAngles;
+
+        animator = GetComponent<Animator>();
 
         // Set target direction for the character body to its inital state.
         if (characterBody)
@@ -93,18 +97,31 @@ public class CombinedMouseLookAndCameraMove : MonoBehaviour
         if (Input.GetKey(rightKey))
         {
             transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
         if (Input.GetKey(leftKey))
         {
             transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isJumping", false);
         }
         if (Input.GetKey(backKey))
         {
             transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isJumping", false);
         }
         if (Input.GetKey(fwdKey))
         {
             transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isJumping", false);
         }
+
     }
 }
