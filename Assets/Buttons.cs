@@ -28,6 +28,14 @@ public class Buttons : MonoBehaviour
     public void Jump()
     {
         animator = GameObject.Find("Banana Man").GetComponent<Animator>();
-        animator.SetBool("isJumping", true);
+        
+        if (animator.GetBool("isJumping"))
+        {
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            animator.SetBool("isJumping", true);
+        }
     }
 }
