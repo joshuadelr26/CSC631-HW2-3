@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scene Switch/Austin.unity
+    guid: efb11ab81d387f7488f636d120973534
+  - enabled: 1
+    path: Assets/Scenes/Scene Switch/Secondary.unity
+    guid: f94e4db44629d844d9e46f16b4424c1a
   m_configObjects: {}
